@@ -1,0 +1,30 @@
+
+<div class="container">
+  <hr>
+  <h1>Edit Details</h1>
+  <hr>
+  <form action="" class="form-group">
+    <label for="regno">Register No :
+    </label>
+    <input type="text" class="form-control" placeholder="register number">
+    <label for="name"> Name :
+    </label>
+    <input type="text" class="form-control" placeholder="name">
+    <label for="doj">Date Of Join :</label>
+    <input type="date" class="form-control" id="date">
+    <label for="Dist">District :</label>
+    <select name="dist" id="dist" class="form-control">
+        *ngFor="let dists of dist"
+        <option value=""  class="form-control"></option>
+    </select>
+    <label for="gender">gender :</label>
+
+    <label for="">male
+    <input type="radio" value="male" name="gender" ></label>
+    <label for="">female
+    <input type="radio" value="female" name="gender" ></label>
+    <br>
+      <input type="submit" class="btn btn-dark">
+</form>
+<hr>
+</div>

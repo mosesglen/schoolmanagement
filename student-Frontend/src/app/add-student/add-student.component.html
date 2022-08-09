@@ -1,0 +1,56 @@
+
+<div class="container">
+  <hr>
+  <h1>Add Student</h1>
+  <hr>
+  <div *ngIf="!submitted">
+
+      <label for="regno">Register No :</label>
+        <input type="text" class="form-control" required
+        [(ngModel)]="Student.reg_no" placeholder="register number" id="regno">
+
+
+      <label for="name"> Name :</label>
+        <input type="text" class="form-control" placeholder="name"
+        required [(ngModel)]="Student.stud_name">
+
+
+      <label for="doj">Date Of Join :</label>
+        <input type="date" class="form-control"
+        required [(ngModel)]="Student.date_of_join">
+
+
+      <label for="doj">Address :</label>
+        <textarea name="address" class="form-control" id="address"
+          cols="30" rows="10" required [(ngModel)]="Student.address">
+        </textarea>
+
+
+      <label for="Dist">District :</label>
+        <select name="dist" id="dist" class="form-control"
+         [(ngModel)]="Student.dist_id">
+
+            <option *ngFor="let item of dist; index as i;"value="{{item.dist_id}}">
+              {{item.dist_name}}
+            </option>
+        </select>
+
+
+      <label for="gender">gender :</label>
+    <br>
+        <label for="">male
+          <input type="radio" value="t" name="gender"
+          required [(ngModel)]="Student.gender">
+        </label>
+
+        <label for="">female
+          <input type="radio" value="f" name="gender"
+          required [(ngModel)]="Student.gender">
+        </label>
+    <br>
+
+      <button (click)="saveStudent()" class="btn btn-dark">Submit</button>
+
+  </div>
+<hr>
+</div>
